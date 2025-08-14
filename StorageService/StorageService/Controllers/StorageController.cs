@@ -427,7 +427,7 @@ namespace StorageService.Presentation.Controllers
                 return BadRequest("userStorageId is needed");
             }
 
-            return Ok( $"http://localhost:5400/api/public/download{await _storage.MakePublicDownloadLink(userStorageId, filelink)}");
+            return Ok( $"http://localhost:5000/storage/public/download{await _storage.MakePublicDownloadLink(userStorageId, filelink)}");
         }
     }
 
