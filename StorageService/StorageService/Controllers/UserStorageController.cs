@@ -82,5 +82,19 @@ namespace StorageService.Presentation.Controllers
 
             return Ok(res);
         }
+
+        [HttpPost("Public-Private")]
+        public async Task<IActionResult> Public_Private(int userStorageId)
+        {
+            var res = await _userStorageService.TogglePublic(userStorageId);
+            if (res)
+            {
+                return Ok("Public");
+            }
+            else
+            {
+                return Ok("Private");
+            }
+        } 
     }
 }

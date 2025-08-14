@@ -14,7 +14,6 @@ F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debu
 F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\refint\StorageService.Application.dll
 F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\StorageService.Application.pdb
 F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\ref\StorageService.Application.dll
-F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\StorageService.Application.sourcelink.json
 F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\StorageS.5C30B2ED.Up2Date
 F:\University\Term 6\Software\StorageService\StorageService.Application\bin\Debug\net6.0\StorageService.Application.runtimeconfig.json
 F:\University\Term 6\Software\StorageService\StorageService.Application\obj\Debug\net6.0\StorageService.Application.genruntimeconfig.cache

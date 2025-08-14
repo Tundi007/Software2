@@ -48,7 +48,6 @@ F:\University\Term 6\Software\StorageService\StorageService\bin\Debug\net6.0\AWS
 F:\University\Term 6\Software\StorageService\StorageService\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 F:\University\Term 6\Software\StorageService\StorageService\bin\Debug\net6.0\StorageService.Presentation.staticwebassets.endpoints.json
 F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\rpswa.dswa.cache.json
-F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\StorageService.Presentation.sourcelink.json
 F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\rjimswa.dswa.cache.json
 F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
 F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json

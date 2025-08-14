@@ -14,5 +14,6 @@ namespace StorageService.Application.Interfaces
         Task<UserStorageVM> ExtendTime(ExtendTimeVM extendTimeVM);
         List<UserStorage> GetUserStorages(int? userId);
         Task<UserStorage> Find(int userStorageId);
+        public Task<bool> TogglePublic(int userStorageId);
     }
 }

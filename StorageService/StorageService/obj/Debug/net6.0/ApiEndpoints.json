@@ -411,6 +411,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "Public_Private",
+    "RelativePath": "api/UserStorage/Public-Private",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StorageService.Presentation.Controllers.ValuesController",
     "Method": "Get",
     "RelativePath": "health",

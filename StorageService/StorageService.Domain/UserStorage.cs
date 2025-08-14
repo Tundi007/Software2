@@ -17,11 +17,11 @@ namespace StorageService.Domain
         public int UserID { get; set; }
 
 
-        public int TotalPrice { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
         public bool IsActive { get; set; }
+        public bool IsPublic { get; set; }
 
     }
 }

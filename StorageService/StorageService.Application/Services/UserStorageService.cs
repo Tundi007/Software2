@@ -23,6 +23,8 @@ namespace StorageService.Application.Services
             _storageTypeRepository = storageTypeRepository;
             _httpClient = httpClient;
         }
+
+
         public async Task<UserStorageVM> Buy(UserStorageCreateVM userStorageCreateVM)
         {
             UserStorageVM vm = new UserStorageVM();
@@ -45,7 +47,6 @@ namespace StorageService.Application.Services
                 StartDate = DateTime.Now,
                 StorageTypeID = storageType.StorageTypeID,
                 UserID = userStorageCreateVM.UserID,
-                TotalPrice = storageType.Price * storageType.Month,
             };
 
             var res = await _userStorageRepository.Create(userStorage);
@@ -66,7 +67,6 @@ namespace StorageService.Application.Services
                     Price = storageType.Price,
                     Title = storageType.Title
                 };
-                vm.TotalPrice = res.TotalPrice;
             }
             return vm;
         }
@@ -104,7 +104,6 @@ namespace StorageService.Application.Services
             vm.EndDate = res.EndDate;
             vm.StartDate = res.StartDate;
             vm.StorageType = null;
-            vm.TotalPrice = res.TotalPrice;
             return vm;
 
         }
@@ -136,5 +135,17 @@ namespace StorageService.Application.Services
 
             }
         }
+
+        public async Task<bool> TogglePublic(int userStorageId)
+        {
+            var res = await _userStorageRepository.FindUserStorage(userStorageId);
+
+            res.IsPublic = !res.IsPublic;
+
+            var res2 = await _userStorageRepository.Update(res);
+
+            return res2.IsPublic;
+        }
+
     }
 }

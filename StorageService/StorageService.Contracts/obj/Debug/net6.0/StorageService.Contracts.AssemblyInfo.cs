@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StorageService.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3631daafa560b794b235a297d367986cab2f4c09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StorageService.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StorageService.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

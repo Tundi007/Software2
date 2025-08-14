@@ -140,5 +140,26 @@ namespace IAM.Presentation.Controllers
             }
             return Unauthorized();
         }
+
+
+        [HttpPost("CheckTokenWithUser")]
+        public async Task<IActionResult> CheckTokenWithUser([FromBody] TokenRequest2 request)
+        {
+            var res = await _tokenCheck.hanle(request.Token);
+            if (res != null)
+            {
+                if (res.User.UserId == request.UserId)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    {
+                        return Unauthorized();
+                    }
+                }
+            }
+            return Unauthorized();
+        }
     }
 }

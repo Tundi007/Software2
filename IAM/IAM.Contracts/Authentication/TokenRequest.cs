@@ -10,4 +10,10 @@ namespace IAM.Contracts.Authentication
     {
         public string Token { get; set; }
     }
+
+    public class TokenRequest2
+    {
+        public string Token { get; set; }
+        public int UserId { get; set; }
+    }
 }

@@ -10,6 +10,5 @@ F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\
 F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\net6.0\refint\StorageService.Contracts.dll
 F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\net6.0\StorageService.Contracts.pdb
 F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\net6.0\ref\StorageService.Contracts.dll
-F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\net6.0\StorageService.Contracts.sourcelink.json
 F:\University\Term 6\Software\StorageService\StorageService.Contracts\bin\Debug\net6.0\StorageService.Contracts.runtimeconfig.json
 F:\University\Term 6\Software\StorageService\StorageService.Contracts\obj\Debug\net6.0\StorageService.Contracts.genruntimeconfig.cache
