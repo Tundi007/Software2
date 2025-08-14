@@ -348,6 +348,22 @@
   },
   {
     "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "ActiveStorage",
+    "RelativePath": "api/UserStorage/ActiveStorage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
     "Method": "Buy",
     "RelativePath": "api/UserStorage/Buy",
     "HttpMethod": "POST",

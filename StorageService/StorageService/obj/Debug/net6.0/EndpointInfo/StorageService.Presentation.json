@@ -629,6 +629,28 @@
         }
       }
     },
+    "/api/UserStorage/ActiveStorage": {
+      "post": {
+        "tags": [
+          "UserStorage"
+        ],
+        "parameters": [
+          {
+            "name": "userStorageId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/UserStorage/Public-Private": {
       "post": {
         "tags": [

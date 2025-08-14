@@ -15,5 +15,6 @@ namespace StorageService.Application.Interfaces
         List<UserStorage> GetUserStorages(int? userId);
         Task<UserStorage> Find(int userStorageId);
         public Task<bool> TogglePublic(int userStorageId);
+        Task<UserStorage> Activate(int userStorageId);
     }
 }

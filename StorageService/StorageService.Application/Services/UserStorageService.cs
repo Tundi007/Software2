@@ -24,6 +24,21 @@ namespace StorageService.Application.Services
             _httpClient = httpClient;
         }
 
+        public async Task<UserStorage> Activate(int userStorageId)
+        {
+            var res = await _userStorageRepository.FindUserStorage(userStorageId);
+
+            if (res == null)
+            {
+                return null;
+            }
+            else
+            {
+                res.IsActive = true;
+                res = await _userStorageRepository.Update(res);
+                return res;
+            }
+        }
 
         public async Task<UserStorageVM> Buy(UserStorageCreateVM userStorageCreateVM)
         {
@@ -42,11 +57,12 @@ namespace StorageService.Application.Services
             StorageType storageType = await _storageTypeRepository.FindStorageType(userStorageCreateVM.StorageTypeID);
             UserStorage userStorage = new UserStorage() 
             {
-                IsActive = true,
+                IsActive = false,
                 EndDate = DateTime.Now.AddMonths(storageType.Month),
                 StartDate = DateTime.Now,
                 StorageTypeID = storageType.StorageTypeID,
                 UserID = userStorageCreateVM.UserID,
+                IsPublic = false
             };
 
             var res = await _userStorageRepository.Create(userStorage);
@@ -110,7 +126,12 @@ namespace StorageService.Application.Services
 
         public async Task<UserStorage> Find(int userStorageId)
         {
-            return await _userStorageRepository.FindUserStorage(userStorageId);
+            var res =  await _userStorageRepository.FindUserStorage(userStorageId);
+            if(res.IsActive == false)
+            {
+                return null;
+            }
+            return res;
         }
 
         public List<UserStorage> GetUserStorages(int? userId)

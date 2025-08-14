@@ -49,6 +49,11 @@ namespace StorageService.Presentation.Controllers
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
 
+            if(us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
+
             if(!us.IsPublic)
             {
                 var token = Request.Headers["Authorization"].ToString();
@@ -80,6 +85,11 @@ namespace StorageService.Presentation.Controllers
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
 
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
+
             var token = Request.Headers["Authorization"].ToString();
 
 
@@ -106,6 +116,11 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> List([FromQuery] string userStorageId, string? folder)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             if (!us.IsPublic)
             {
@@ -137,6 +152,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> GetBucketUsage([FromQuery] string userStorageId = null)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             if (!us.IsPublic)
             {
@@ -174,6 +193,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> CreateFolder([FromQuery] string folderName, [FromQuery] string userStorageId)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -204,6 +227,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> ListFolders([FromQuery] string userStorageId)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             if (!us.IsPublic)
             {
@@ -237,6 +264,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> Upload(IFormFile file, [FromQuery] string userStorageId, [FromQuery] string? folder = "")
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -276,6 +307,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> MoveFile([FromQuery] string userStorageId, [FromQuery] string oldPath, [FromQuery] string newPath)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -306,6 +341,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> MoveFolder([FromQuery] string userStorageId, [FromQuery] string oldFolder, [FromQuery] string newFolder)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -336,6 +375,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> DeleteFolder([FromQuery] string userStorageId, [FromQuery] string folderPath)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -367,6 +410,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> DeleteBucket(string userStorageId)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             var token = Request.Headers["Authorization"].ToString();
 
@@ -401,6 +448,10 @@ namespace StorageService.Presentation.Controllers
         public async Task<IActionResult> MakeDownloadPublic(string userStorageId,string filelink)
         {
             var us = await _userStorage.Find(int.Parse(userStorageId));
+            if (us == null)
+            {
+                return BadRequest("Storage not Buyed or isnt active yet");
+            }
 
             if (!us.IsPublic)
             {
