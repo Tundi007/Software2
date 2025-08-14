@@ -1,0 +1,171 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using StorageService.Application.Interfaces;
+
+namespace StorageService.Presentation.Controllers
+{
+    [ApiController]
+    [Route("api/storage")]
+    [VerifyUser]
+    public class StorageController : ControllerBase
+    {
+        private readonly ICloudStorageService _storage;
+
+        public StorageController(ICloudStorageService storage)
+        {
+            _storage = storage;
+        }
+
+        //[HttpPost("upload")]
+        //public async Task<IActionResult> Upload(IFormFile file, [FromQuery] string userStorageId)
+        //{
+        //    try
+        //    {
+        //        await _storage.EnsureUserBucketExistsAsync(userStorageId);
+        //        var uri = await _storage.UploadAsync(file, container: "", userStorageId);
+        //        return Ok(new { Url = uri.ToString() });
+        //    }
+        //    catch (InvalidOperationException ex)
+        //    {
+        //        return BadRequest(new { Message = ex.Message });
+        //    }
+        //}
+
+
+
+        [HttpGet("download")]
+        public async Task<IActionResult> Download(string fileName, string userStorageId)
+        {
+            var stream = await _storage.DownloadAsync(fileName, container: "", userStorageId);
+            return File(stream, "application/octet-stream", fileName);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string fileName, string userStorageId)
+        {
+            var result = await _storage.DeleteAsync(fileName, container: "", userStorageId);
+            return result ? Ok() : NotFound();
+        }
+
+        [HttpGet("list")]
+        //[VerifyUser]
+        public async Task<IActionResult> List([FromQuery] string userStorageId, string? folder)
+        {
+            await _storage.EnsureUserBucketExistsAsync(userStorageId);
+            var files = await _storage.ListAsync(folder, userStorageId);
+            return Ok(files);
+        }
+
+
+        [HttpGet("usage")]
+        public async Task<IActionResult> GetBucketUsage([FromQuery] string userStorageId = null)
+        {
+            var sizeInBytes = await _storage.GetBucketSizeAsync(userStorageId);
+            var sizeInMB = Math.Round(sizeInBytes / 1024.0 / 1024.0, 2);
+
+            return Ok(new
+            {
+                userStorageId = userStorageId ?? "all",
+                SizeInBytes = sizeInBytes,
+                SizeInMB = sizeInMB
+            });
+        }
+
+        [HttpPost("create-folder")]
+        public async Task<IActionResult> CreateFolder([FromQuery] string folderName, [FromQuery] string userStorageId)
+        {
+            if (string.IsNullOrWhiteSpace(folderName) || string.IsNullOrWhiteSpace(userStorageId))
+                return BadRequest("Folder name and user ID are required.");
+
+            await _storage.CreateFolderAsync(folderName, userStorageId);
+            return Ok(new { Message = $"Folder '{folderName}' created for user {userStorageId}" });
+        }
+
+        [HttpGet("folders")]
+        public async Task<IActionResult> ListFolders([FromQuery] string userStorageId)
+        {
+            var folders = await _storage.ListFoldersAsync(userStorageId);
+            return Ok(folders);
+        }
+
+        [HttpPost("upload")]
+        [Consumes("multipart/form-data")] // makes Swagger send multipart
+        [RequestSizeLimit(5L * 1024 * 1024 * 1024)] // per-endpoint overall request size
+        [RequestFormLimits(MultipartBodyLengthLimit = 5L * 1024 * 1024 * 1024)]
+        public async Task<IActionResult> Upload(IFormFile file, [FromQuery] string userStorageId, [FromQuery] string? folder = "")
+        {
+            try
+            {
+                await _storage.EnsureUserBucketExistsAsync(userStorageId);
+                var uri = await _storage.UploadAsync(file, container: "", userStorageId, folder);
+                if(uri == null)
+                {
+                    return BadRequest("User doesnt have a storage");
+                }
+                return Ok(new { Url = uri.ToString() });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        [HttpPost("move")]
+        public async Task<IActionResult> MoveFile([FromQuery] string userStorageId, [FromQuery] string oldPath, [FromQuery] string newPath)
+        {
+            if (string.IsNullOrWhiteSpace(oldPath) || string.IsNullOrWhiteSpace(newPath))
+                return BadRequest("Both oldPath and newPath are required.");
+
+            await _storage.MoveFileAsync(userStorageId, oldPath, newPath);
+            return Ok(new { Message = $"File moved from '{oldPath}' to '{newPath}'" });
+        }
+
+        [HttpPost("move-folder")]
+        public async Task<IActionResult> MoveFolder([FromQuery] string userStorageId, [FromQuery] string oldFolder, [FromQuery] string newFolder)
+        {
+            if (string.IsNullOrWhiteSpace(oldFolder) || string.IsNullOrWhiteSpace(newFolder))
+                return BadRequest("Both oldFolder and newFolder are required.");
+
+            await _storage.MoveFolderAsync(userStorageId, oldFolder, newFolder);
+            return Ok(new { Message = $"Folder moved from '{oldFolder}' to '{newFolder}'" });
+        }
+
+        [HttpDelete("delete-folder")]
+        public async Task<IActionResult> DeleteFolder([FromQuery] string userStorageId, [FromQuery] string folderPath)
+        {
+            if (string.IsNullOrWhiteSpace(folderPath))
+                return BadRequest("Folder path is required.");
+
+            await _storage.DeleteFolderAsync(userStorageId, folderPath);
+            return Ok(new { Message = $"Folder '{folderPath}' deleted for user {userStorageId}" });
+        }
+
+
+        [HttpDelete("Delete-Storage")]
+        public async Task<IActionResult> DeleteBucket(string userStorageId)
+        {
+            if (string.IsNullOrWhiteSpace(userStorageId))
+            {
+                return BadRequest("userStorageId is needed");
+            }
+
+            await _storage.DeleteBucket(userStorageId);
+
+            return Ok("Delete Successfuly");
+        }
+
+
+        [HttpGet("Create-Public-Download")]
+        public async Task<IActionResult> MakeDownloadPublic(string userStorageId,string filelink)
+        {
+            if (string.IsNullOrWhiteSpace(userStorageId))
+            {
+                return BadRequest("userStorageId is needed");
+            }
+
+            return Ok( $"http://localhost:5400/api/public/download{await _storage.MakePublicDownloadLink(userStorageId, filelink)}");
+        }
+    }
+
+}

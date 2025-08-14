@@ -1,0 +1,13 @@
+F:\University\Term 6\Software\Media\Media.Domain\bin\Release\net6.0\Media.Domain.deps.json
+F:\University\Term 6\Software\Media\Media.Domain\bin\Release\net6.0\Media.Domain.dll
+F:\University\Term 6\Software\Media\Media.Domain\bin\Release\net6.0\Media.Domain.pdb
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.csproj.AssemblyReference.cache
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.AssemblyInfoInputs.cache
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.AssemblyInfo.cs
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.csproj.CoreCompileInputs.cache
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.sourcelink.json
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.dll
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\refint\Media.Domain.dll
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\Media.Domain.pdb
+F:\University\Term 6\Software\Media\Media.Domain\obj\Release\net6.0\ref\Media.Domain.dll

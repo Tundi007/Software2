@@ -1,0 +1,423 @@
+[
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.PublicController",
+    "Method": "Download",
+    "RelativePath": "api/Public/download/{bucket}/{file}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bucket",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "Delete",
+    "RelativePath": "api/storage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "CreateFolder",
+    "RelativePath": "api/storage/create-folder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folderName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "MakeDownloadPublic",
+    "RelativePath": "api/storage/Create-Public-Download",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filelink",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "DeleteFolder",
+    "RelativePath": "api/storage/delete-folder",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "folderPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "DeleteBucket",
+    "RelativePath": "api/storage/Delete-Storage",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "Download",
+    "RelativePath": "api/storage/download",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "ListFolders",
+    "RelativePath": "api/storage/folders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "List",
+    "RelativePath": "api/storage/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "folder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "MoveFile",
+    "RelativePath": "api/storage/move",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "oldPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "MoveFolder",
+    "RelativePath": "api/storage/move-folder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "oldFolder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newFolder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "Upload",
+    "RelativePath": "api/storage/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "folder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageController",
+    "Method": "GetBucketUsage",
+    "RelativePath": "api/storage/usage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageTypeController",
+    "Method": "Create",
+    "RelativePath": "api/StorageType/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storageTypeVMCreate",
+        "Type": "StorageService.Contracts.StorageTypeVMCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/StorageType/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageTypeController",
+    "Method": "Find",
+    "RelativePath": "api/StorageType/find",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageTypeController",
+    "Method": "Get",
+    "RelativePath": "api/StorageType/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.StorageTypeController",
+    "Method": "Update",
+    "RelativePath": "api/StorageType/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storageTypeVM",
+        "Type": "StorageService.Contracts.StorageTypeVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "Buy",
+    "RelativePath": "api/UserStorage/Buy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageCreateVM",
+        "Type": "StorageService.Contracts.UserStorageCreateVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "ExtendTime",
+    "RelativePath": "api/UserStorage/extendtime",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "extendTimeVM",
+        "Type": "StorageService.Contracts.ExtendTimeVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "GetUserStorage",
+    "RelativePath": "api/UserStorage/GetUserStorage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStorageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.UserStorageController",
+    "Method": "GetUserStorages",
+    "RelativePath": "api/UserStorage/GetUserStorages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StorageService.Presentation.Controllers.ValuesController",
+    "Method": "Get",
+    "RelativePath": "health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

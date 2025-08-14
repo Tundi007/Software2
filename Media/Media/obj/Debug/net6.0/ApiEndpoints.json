@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "Media.Presentation.Controllers.MediaController",
+    "Method": "GetMedia",
+    "RelativePath": "api/Media/GetMedia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filename",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Media.Presentation.Controllers.MediaController",
+    "Method": "Save",
+    "RelativePath": "api/Media/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Media.Presentation.Controllers.ValuesController",
+    "Method": "Get",
+    "RelativePath": "health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

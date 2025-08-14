@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\University\\Term 6\\Software\\StorageService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|solutionrelative:storageservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|solutionrelative:storageservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice\\controllers\\storagetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|solutionrelative:storageservice\\controllers\\storagetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice.infrastructure\\migrations\\20250814120459_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|solutionrelative:storageservice.infrastructure\\migrations\\20250814120459_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice.infrastructure\\context\\sqlservercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|solutionrelative:storageservice.infrastructure\\context\\sqlservercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|f:\\university\\term 6\\software\\storageservice\\storageservice.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0A5980-4226-4AC4-BA39-9367761D9A5B}|StorageService.Infrastructure\\StorageService.Infrastructure.csproj|solutionrelative:storageservice.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 370,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StorageTypeController.cs",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\Controllers\\StorageTypeController.cs",
+              "RelativeDocumentMoniker": "StorageService\\Controllers\\StorageTypeController.cs",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\Controllers\\StorageTypeController.cs",
+              "RelativeToolTip": "StorageService\\Controllers\\StorageTypeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:07:15.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250814120459_create.cs",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\Migrations\\20250814120459_create.cs",
+              "RelativeDocumentMoniker": "StorageService.Infrastructure\\Migrations\\20250814120459_create.cs",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\Migrations\\20250814120459_create.cs",
+              "RelativeToolTip": "StorageService.Infrastructure\\Migrations\\20250814120459_create.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:05:00.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLServerContext.cs",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\Context\\SQLServerContext.cs",
+              "RelativeDocumentMoniker": "StorageService.Infrastructure\\Context\\SQLServerContext.cs",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\Context\\SQLServerContext.cs",
+              "RelativeToolTip": "StorageService.Infrastructure\\Context\\SQLServerContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:01:22.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "StorageService.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "StorageService.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:01:12.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\Program.cs",
+              "RelativeDocumentMoniker": "StorageService\\Program.cs",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\Program.cs",
+              "RelativeToolTip": "StorageService\\Program.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFQAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:01:02.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\appsettings.json",
+              "RelativeDocumentMoniker": "StorageService\\appsettings.json",
+              "ToolTip": "F:\\University\\Term 6\\Software\\StorageService\\StorageService\\appsettings.json",
+              "RelativeToolTip": "StorageService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-14T12:00:28.597Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

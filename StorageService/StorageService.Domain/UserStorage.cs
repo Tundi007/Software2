@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StorageService.Domain
+{
+    public class UserStorage
+    {
+        public int UserStorageID { get; set; }
+
+        [ForeignKey("StorageType")]
+        public int StorageTypeID { get; set; }
+        public StorageType StorageType { get; set; }
+        public int UserID { get; set; }
+
+
+        public int TotalPrice { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+
+        public bool IsActive { get; set; }
+
+    }
+}
