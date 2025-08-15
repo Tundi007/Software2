@@ -358,6 +358,11 @@
         "Name": "userStorageId",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "authority",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

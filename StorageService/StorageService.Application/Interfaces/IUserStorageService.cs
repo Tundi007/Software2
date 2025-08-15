@@ -14,6 +14,7 @@ namespace StorageService.Application.Interfaces
         Task<UserStorageVM> ExtendTime(ExtendTimeVM extendTimeVM);
         List<UserStorage> GetUserStorages(int? userId);
         Task<UserStorage> Find(int userStorageId);
+        Task<UserStorage> FindForActive(int userStorageId);
         public Task<bool> TogglePublic(int userStorageId);
         Task<UserStorage> Activate(int userStorageId);
     }

@@ -10,9 +10,8 @@ namespace StorageService.Contracts
     {
         public StorageTypeVM StorageType { get; set; }
         public int UserID { get; set; }
-
-
-        public int TotalPrice { get; set; }
+    
+        public int UserStorageId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }

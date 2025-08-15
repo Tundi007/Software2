@@ -642,6 +642,13 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "authority",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

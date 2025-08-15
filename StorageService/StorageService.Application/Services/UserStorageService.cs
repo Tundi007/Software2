@@ -72,6 +72,7 @@ namespace StorageService.Application.Services
             }
             else
             {
+                vm.UserStorageId = res.UserStorageID;
                 vm.UserID = res.UserID;
                 vm.EndDate = res.EndDate;
                 vm.StartDate = res.StartDate;
@@ -127,10 +128,17 @@ namespace StorageService.Application.Services
         public async Task<UserStorage> Find(int userStorageId)
         {
             var res =  await _userStorageRepository.FindUserStorage(userStorageId);
+            res.StorageType = await _storageTypeRepository.FindStorageType(res.StorageTypeID);
             if(res.IsActive == false)
             {
                 return null;
             }
+            return res;
+        }
+        public async Task<UserStorage> FindForActive(int userStorageId)
+        {
+            var res = await _userStorageRepository.FindUserStorage(userStorageId);
+            res.StorageType = await _storageTypeRepository.FindStorageType(res.StorageTypeID);
             return res;
         }
 
