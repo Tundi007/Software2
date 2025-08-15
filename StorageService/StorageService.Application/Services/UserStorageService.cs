@@ -84,6 +84,8 @@ namespace StorageService.Application.Services
                     Price = storageType.Price,
                     Title = storageType.Title
                 };
+                vm.IsPublic = false;
+                vm.IsActive = false;
             }
             return vm;
         }
@@ -121,6 +123,8 @@ namespace StorageService.Application.Services
             vm.EndDate = res.EndDate;
             vm.StartDate = res.StartDate;
             vm.StorageType = null;
+            vm.IsActive = res.IsActive;
+            vm.IsPublic = res.IsPublic;
             return vm;
 
         }
