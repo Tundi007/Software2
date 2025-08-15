@@ -73,7 +73,7 @@ namespace StorageService.Presentation.Controllers
             {
                 merchant_id = "15331214-463e-40c5-a428-5dc3f77d7de4",
                 amount = res.StorageType.Price * 10,
-                callback_url = $"http://localhost:3000/payment/verify?userStorageId={res.UserStorageId}",
+                callback_url = $"http://skydock.liara.run/payment/verify?userStorageId={res.UserStorageId}",
                 description = "Transaction description.",
                 metadata = new
                 {

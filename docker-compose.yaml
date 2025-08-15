@@ -46,13 +46,14 @@ services:
     mongo:
         image: mongo:7
         container_name: mongo
+        # NOTE: fixed a common typo here (27107 -> 27017 on the host side)
         ports:
-            - "27107:27017"
+            - "27017:27017"
         volumes:
             - mongo_data:/data/db
 
     minio:
-        image: minio/minio:latest
+        image: minio/minio:RELEASE.2024-12-18T13-15-44Z # pin a version; avoid :latest for reproducibility
         container_name: minio
         command: server /data --console-address ":9001"
         environment:
@@ -66,8 +67,10 @@ services:
 
     api-gateway:
         build:
+            # NOTE: double-check this path — looks like "API-Gatewat" may be a typo
             context: ./API-Gatewat/API-Gatewat
             dockerfile: Dockerfile
+        image: yourrepo/api-gateway:1.0.0
         container_name: api-gateway
         environment:
             - ASPNETCORE_ENVIRONMENT=Container
@@ -85,6 +88,7 @@ services:
         build:
             context: .
             dockerfile: IAM/IAM.Presentation/Dockerfile
+        image: yourrepo/iam:1.0.0
         container_name: iam
         depends_on:
             mysql:
@@ -92,7 +96,8 @@ services:
         environment:
             - ASPNETCORE_ENVIRONMENT=Container
             - ASPNETCORE_URLS=http://+:8080
-            - ConnectionStrings__Default='Server=mysql;Port=3306;Database=IAMDb;User ID=root;Password=YourStrong!Passw0rd;'
+            # NOTE: remove surrounding single quotes so they don’t end up in the value
+            - ConnectionStrings__Default=Server=mysql;Port=3306;Database=IAMDb;User ID=root;Password=YourStrong!Passw0rd;
             - Redis__Configuration=redis:6379,abortConnect=false
         ports:
             - "5001:8080"
@@ -101,6 +106,7 @@ services:
         build:
             context: .
             dockerfile: Media/Media/Dockerfile
+        image: yourrepo/media:1.0.0
         container_name: media
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
@@ -120,12 +126,13 @@ services:
         build:
             context: .
             dockerfile: StorageService/StorageService/Dockerfile
+        image: yourrepo/storage:1.0.0
         container_name: storage
         depends_on:
             mysql:
                 condition: service_healthy
             minio:
-                condition: service_started # minio doesn't have a healthcheck, so this is the default
+                condition: service_started
         environment:
             - ASPNETCORE_ENVIRONMENT=Container
             - ASPNETCORE_URLS=http://+:8080
