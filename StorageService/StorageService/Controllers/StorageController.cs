@@ -27,21 +27,6 @@ namespace StorageService.Presentation.Controllers
             url = "http://iam:8080/api/auth/CheckTokenWithUser";
         }
 
-        //[HttpPost("upload")]
-        //public async Task<IActionResult> Upload(IFormFile file, [FromQuery] string userStorageId)
-        //{
-        //    try
-        //    {
-        //        await _storage.EnsureUserBucketExistsAsync(userStorageId);
-        //        var uri = await _storage.UploadAsync(file, container: "", userStorageId);
-        //        return Ok(new { Url = uri.ToString() });
-        //    }
-        //    catch (InvalidOperationException ex)
-        //    {
-        //        return BadRequest(new { Message = ex.Message });
-        //    }
-        //}
-
 
 
         [HttpGet("download")]

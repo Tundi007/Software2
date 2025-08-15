@@ -52,13 +52,13 @@ builder.Services.Configure<FormOptions>(o =>
     o.MultipartBodyLengthLimit = 5L * 1024 * 1024 * 1024;
 });
 
-// // 2) Raise Kestrel request body size (overall)
-// builder.WebHost.ConfigureKestrel(o =>
-// {
-//     // Set a large limit or null to disable
-//     o.Limits.MaxRequestBodySize = 5L * 1024 * 1024 * 1024; // 2 GiB
-//     // o.Limits.MaxRequestBodySize = null; // (disables Kestrel limit)
-// });
+// 2) Raise Kestrel request body size (overall)
+builder.WebHost.ConfigureKestrel(o =>
+{
+    // Set a large limit or null to disable
+    o.Limits.MaxRequestBodySize = 5L * 1024 * 1024 * 1024; // 2 GiB
+                                                           // o.Limits.MaxRequestBodySize = null; // (disables Kestrel limit)
+});
 
 
 

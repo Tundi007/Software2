@@ -52,13 +52,21 @@ namespace StorageService.Infrastructure.Services
 
         public async Task<Uri> UploadAsync(IFormFile file, string container, string userStorageId, string? folder)
         {
-            var userstprage = _userStorageRepository.GetUserStorages().FirstOrDefault(x => x.UserStorageID == int.Parse(userStorageId));
+            var userstprage = await _userStorageRepository.FindUserStorage(int.Parse(userStorageId));
             if (userstprage == null)
             {
                 return null;
             }
             int x = userstprage.StorageType.Capacity;
-            long maxUserQuota = x * 1024 * 1024 * 1024;
+            if(x == 0)
+            {
+                throw new InvalidOperationException($"sth wnt wrong");
+            }
+            long maxUserQuota = (long)x * 1024 * 1024 * 1024;
+            if (maxUserQuota <= 0)
+            {
+                throw new InvalidOperationException("kossher");
+            }
             var currentUsage = await GetBucketSizeAsync(userStorageId);
 
             if (currentUsage + file.Length > maxUserQuota)
@@ -80,12 +88,12 @@ namespace StorageService.Infrastructure.Services
             //    key = $"{folder.TrimEnd('/')}/{file.FileName}";
             //}
 
-                var request = new PutObjectRequest
-                {
-                    BucketName = bucket,
-                    Key = key,
-                    InputStream = file.OpenReadStream()
-                };
+            var request = new PutObjectRequest
+            {
+                BucketName = bucket,
+                Key = key,
+                InputStream = file.OpenReadStream()
+            };
 
             await _s3Client.PutObjectAsync(request);
 

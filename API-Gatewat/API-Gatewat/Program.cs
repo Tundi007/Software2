@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,20 @@ builder.Services.AddCors(options =>
 // Add Ocelot configuration
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot();
+
+builder.Services.Configure<FormOptions>(o =>
+{
+    // Example: 2 GiB
+    o.MultipartBodyLengthLimit = 5L * 1024 * 1024 * 1024;
+});
+
+// 2) Raise Kestrel request body size (overall)
+builder.WebHost.ConfigureKestrel(o =>
+{
+    // Set a large limit or null to disable
+    o.Limits.MaxRequestBodySize = 5L * 1024 * 1024 * 1024; // 2 GiB
+                                                           // o.Limits.MaxRequestBodySize = null; // (disables Kestrel limit)
+});
 
 builder.Services.AddHealthChecks()
     // Process is up

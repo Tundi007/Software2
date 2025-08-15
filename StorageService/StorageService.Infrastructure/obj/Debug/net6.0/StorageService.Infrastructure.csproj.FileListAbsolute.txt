@@ -41,3 +41,4 @@ F:\University\Term 6\software git\Software2\StorageService\StorageService.Infras
 F:\University\Term 6\software git\Software2\StorageService\StorageService.Infrastructure\obj\Debug\net6.0\StorageService.Infrastructure.pdb
 F:\University\Term 6\software git\Software2\StorageService\StorageService.Infrastructure\obj\Debug\net6.0\StorageService.Infrastructure.genruntimeconfig.cache
 F:\University\Term 6\software git\Software2\StorageService\StorageService.Infrastructure\obj\Debug\net6.0\ref\StorageService.Infrastructure.dll
+F:\University\Term 6\Software\StorageService\StorageService.Infrastructure\obj\Debug\net6.0\StorageService.Infrastructure.sourcelink.json

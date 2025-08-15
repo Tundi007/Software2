@@ -149,3 +149,4 @@ F:\University\Term 6\software git\Software2\StorageService\StorageService\obj\De
 F:\University\Term 6\software git\Software2\StorageService\StorageService\obj\Debug\net6.0\StorageService.Presentation.pdb
 F:\University\Term 6\software git\Software2\StorageService\StorageService\obj\Debug\net6.0\StorageService.Presentation.genruntimeconfig.cache
 F:\University\Term 6\software git\Software2\StorageService\StorageService\obj\Debug\net6.0\ref\StorageService.Presentation.dll
+F:\University\Term 6\Software\StorageService\StorageService\obj\Debug\net6.0\StorageService.Presentation.sourcelink.json
