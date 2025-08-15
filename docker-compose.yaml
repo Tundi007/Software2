@@ -1,4 +1,4 @@
-version: "3.9"
+
 
 services:
   mysql:
@@ -55,9 +55,7 @@ services:
       - minio_data:/data
 
   api-gateway:
-    build:
-      context: ./API-Gatewat/API-Gatewat
-      dockerfile: Dockerfile
+    image: carrypotter007/api-gateway:latest
     container_name: api-gateway
     environment:
       - ASPNETCORE_ENVIRONMENT=Container
@@ -72,9 +70,7 @@ services:
       - "5000:8080"
 
   iam:
-    build:
-      context: .
-      dockerfile: IAM/IAM.Presentation/Dockerfile
+    image: carrypotter007/iam:latest
     container_name: iam
     depends_on:
       mysql:
@@ -88,9 +84,7 @@ services:
       - "5001:8080"
 
   media:
-    build:
-      context: .
-      dockerfile: Media/Media/Dockerfile
+    image: carrypotter007/media:latest
     container_name: media
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -107,9 +101,7 @@ services:
       - "5002:8080"
 
   storage:
-    build:
-      context: .
-      dockerfile: StorageService/StorageService/Dockerfile
+    image: carrypotter007/storage:latest
     container_name: storage
     depends_on:
       mysql:
