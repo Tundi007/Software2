@@ -128,6 +128,10 @@ namespace StorageService.Application.Services
         public async Task<UserStorage> Find(int userStorageId)
         {
             var res =  await _userStorageRepository.FindUserStorage(userStorageId);
+            if(res == null)
+            {
+                return null;
+            }
             res.StorageType = await _storageTypeRepository.FindStorageType(res.StorageTypeID);
             if(res.IsActive == false)
             {

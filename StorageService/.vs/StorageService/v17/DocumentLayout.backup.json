@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|solutionrelative:storageservice\\controllers\\userstoragecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.application\\services\\userstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|solutionrelative:storageservice.application\\services\\userstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice\\controllers\\storagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9447D8E-AEE9-4406-8598-C08F4DDC640B}|StorageService\\StorageService.Presentation.csproj|solutionrelative:storageservice\\controllers\\storagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E51B4D6-E569-49F2-A417-3B1C1F7A5F08}|StorageService.Contracts\\StorageService.Contracts.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.contracts\\userstoragevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E51B4D6-E569-49F2-A417-3B1C1F7A5F08}|StorageService.Contracts\\StorageService.Contracts.csproj|solutionrelative:storageservice.contracts\\userstoragevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.application\\services\\userstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|solutionrelative:storageservice.application\\services\\userstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.application\\interfaces\\iuserstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85FA4010-A1E2-49FF-A264-625F2C01A18A}|StorageService.Application\\StorageService.Application.csproj|solutionrelative:storageservice.application\\interfaces\\iuserstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E51B4D6-E569-49F2-A417-3B1C1F7A5F08}|StorageService.Contracts\\StorageService.Contracts.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.contracts\\userstoragevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E51B4D6-E569-49F2-A417-3B1C1F7A5F08}|StorageService.Contracts\\StorageService.Contracts.csproj|solutionrelative:storageservice.contracts\\userstoragevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E51B4D6-E569-49F2-A417-3B1C1F7A5F08}|StorageService.Contracts\\StorageService.Contracts.csproj|f:\\university\\term 6\\software git\\software2\\storageservice\\storageservice.contracts\\tokencheckvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserStorageVM.cs",
               "DocumentMoniker": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService.Contracts\\UserStorageVM.cs",
               "RelativeDocumentMoniker": "StorageService.Contracts\\UserStorageVM.cs",
@@ -81,22 +81,23 @@
               "RelativeDocumentMoniker": "StorageService\\Controllers\\UserStorageController.cs",
               "ToolTip": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService\\Controllers\\UserStorageController.cs",
               "RelativeToolTip": "StorageService\\Controllers\\UserStorageController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAYwIcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAgwIoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T16:49:10.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IUserStorageService.cs",
               "DocumentMoniker": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService.Application\\Interfaces\\IUserStorageService.cs",
               "RelativeDocumentMoniker": "StorageService.Application\\Interfaces\\IUserStorageService.cs",
               "ToolTip": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService.Application\\Interfaces\\IUserStorageService.cs",
               "RelativeToolTip": "StorageService.Application\\Interfaces\\IUserStorageService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:47:27.738Z"
+              "WhenOpened": "2025-08-14T16:47:27.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -136,26 +137,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserStorageService.cs",
               "DocumentMoniker": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService.Application\\Services\\UserStorageService.cs",
               "RelativeDocumentMoniker": "StorageService.Application\\Services\\UserStorageService.cs",
               "ToolTip": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService.Application\\Services\\UserStorageService.cs",
               "RelativeToolTip": "StorageService.Application\\Services\\UserStorageService.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAgwIwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAgwIkAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T15:50:12.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "StorageController.cs",
               "DocumentMoniker": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService\\Controllers\\StorageController.cs",
               "RelativeDocumentMoniker": "StorageService\\Controllers\\StorageController.cs",
               "ToolTip": "F:\\University\\Term 6\\software git\\Software2\\StorageService\\StorageService\\Controllers\\StorageController.cs",
               "RelativeToolTip": "StorageService\\Controllers\\StorageController.cs",
-              "ViewState": "AgIAALABAAAAAAAAAAAiwMMBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAALwBAAAAAAAAAAAiwMEBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T15:48:30.855Z",
               "EditorCaption": ""
