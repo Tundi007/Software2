@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("https://skydock.liara.run") // Your Next.js frontend URL
+        policy.AllowAnyOrigin() // Your Next.js frontend URL
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
